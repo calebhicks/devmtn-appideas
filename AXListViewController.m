@@ -36,9 +36,12 @@
     [self.view addSubview:tableView];
     
     self.dataSource = [AXListViewControllerDataSource new];
+    
     [self.dataSource registerTableView:tableView];
     
     self.tableView = tableView;
+    
+    tableView.dataSource = self.dataSource;
     
     self.navigationItem.title = @"App Ideas";
     

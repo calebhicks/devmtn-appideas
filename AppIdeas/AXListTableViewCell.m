@@ -21,7 +21,6 @@
         self.titleField.placeholder = @"Idea Name";
         self.titleField.text = @"Text for TitleField";
         [self.contentView addSubview:self.titleField];
-
         
     }
     return self;
