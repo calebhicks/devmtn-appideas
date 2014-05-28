@@ -8,6 +8,8 @@
 
 #import "AXListViewControllerDataSource.h"
 #import "AXListViewController.h"
+#import "AXAddNewIdeaViewController.h"
+#import "AXListTableViewCell.h"
 
 static NSString * const cellIdentifier = @"identifier";
 
@@ -18,10 +20,15 @@ static NSString * const cellIdentifier = @"identifier";
 
 @implementation AXListViewControllerDataSource
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (AXListTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    cell.textLabel.text = @"I'm some text in a TableViewCell!";
+    AXListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if(!cell){
+        cell = [[AXListTableViewCell alloc]init];
+    }
+    
+    //cell.textLabel.text = @"I'm some text in a TableViewCell!";
     return cell;
 }
 
@@ -38,13 +45,21 @@ static NSString * const cellIdentifier = @"identifier";
 
 - (void)registerTableView:(UITableView *)tableView {
     
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
+    [tableView registerClass:[AXListTableViewCell class] forCellReuseIdentifier:cellIdentifier];
     
 }
 
 - (void)newItem {
     
-    NSLog(@"Yehaw!");
+
+    NSLog(@"Working");
+    
+    
+//    AXAddNewIdeaViewController *viewController = [[AXAddNewIdeaViewController alloc]init];
+//    
+//    [self.navigationController pushViewController:viewController animated:YES];
+//    
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
 
@@ -58,5 +73,9 @@ static NSString * const cellIdentifier = @"identifier";
     // Pass the selected object to the new view controller.
 }
 */
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    return YES;
+}
 
 @end

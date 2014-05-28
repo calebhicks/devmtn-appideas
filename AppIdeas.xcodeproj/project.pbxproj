@@ -21,6 +21,8 @@
 		3C990F1819356313001743EC /* AppIdeasTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C990F1719356313001743EC /* AppIdeasTests.m */; };
 		3C990F2319356326001743EC /* AXListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C990F2219356326001743EC /* AXListViewController.m */; };
 		3C990F29193563A7001743EC /* AXListViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C990F28193563A7001743EC /* AXListViewControllerDataSource.m */; };
+		3C990F2C19357AE3001743EC /* AXAddNewIdeaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C990F2B19357AE3001743EC /* AXAddNewIdeaViewController.m */; };
+		3C990F3019357C16001743EC /* AXListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C990F2F19357C16001743EC /* AXListTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		3C990F2219356326001743EC /* AXListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXListViewController.m; path = ../AXListViewController.m; sourceTree = "<group>"; };
 		3C990F27193563A7001743EC /* AXListViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXListViewControllerDataSource.h; path = ../AXListViewControllerDataSource.h; sourceTree = "<group>"; };
 		3C990F28193563A7001743EC /* AXListViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXListViewControllerDataSource.m; path = ../AXListViewControllerDataSource.m; sourceTree = "<group>"; };
+		3C990F2A19357AE3001743EC /* AXAddNewIdeaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXAddNewIdeaViewController.h; sourceTree = "<group>"; };
+		3C990F2B19357AE3001743EC /* AXAddNewIdeaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXAddNewIdeaViewController.m; sourceTree = "<group>"; };
+		3C990F2E19357C16001743EC /* AXListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXListTableViewCell.h; sourceTree = "<group>"; };
+		3C990F2F19357C16001743EC /* AXListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXListTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,8 @@
 		3C990EF819356312001743EC /* AppIdeas */ = {
 			isa = PBXGroup;
 			children = (
+				3C990F2E19357C16001743EC /* AXListTableViewCell.h */,
+				3C990F2F19357C16001743EC /* AXListTableViewCell.m */,
 				3C990F27193563A7001743EC /* AXListViewControllerDataSource.h */,
 				3C990F28193563A7001743EC /* AXListViewControllerDataSource.m */,
 				3C990F2119356326001743EC /* AXListViewController.h */,
@@ -120,6 +128,7 @@
 				3C990F0119356312001743EC /* AXAppDelegate.h */,
 				3C990F0219356312001743EC /* AXAppDelegate.m */,
 				3C990F0419356312001743EC /* Images.xcassets */,
+				3C990F2D19357BE7001743EC /* Experimental */,
 				3C990EF919356312001743EC /* Supporting Files */,
 			);
 			path = AppIdeas;
@@ -152,6 +161,15 @@
 				3C990F1419356313001743EC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3C990F2D19357BE7001743EC /* Experimental */ = {
+			isa = PBXGroup;
+			children = (
+				3C990F2A19357AE3001743EC /* AXAddNewIdeaViewController.h */,
+				3C990F2B19357AE3001743EC /* AXAddNewIdeaViewController.m */,
+			);
+			name = Experimental;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +272,8 @@
 				3C990EFF19356312001743EC /* main.m in Sources */,
 				3C990F0319356312001743EC /* AXAppDelegate.m in Sources */,
 				3C990F2319356326001743EC /* AXListViewController.m in Sources */,
+				3C990F3019357C16001743EC /* AXListTableViewCell.m in Sources */,
+				3C990F2C19357AE3001743EC /* AXAddNewIdeaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

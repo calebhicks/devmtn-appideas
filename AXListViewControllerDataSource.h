@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AXListViewControllerDataSource : NSObject <UITableViewDataSource>
+@interface AXListViewControllerDataSource : NSObject <UITableViewDataSource, UITextFieldDelegate>
 
 @property (nonatomic, strong) NSArray *arrayOfIdeas;
 
