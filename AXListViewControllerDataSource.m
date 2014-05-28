@@ -42,6 +42,12 @@ static NSString * const cellIdentifier = @"identifier";
     
 }
 
+- (void)newItem {
+    
+    NSLog(@"Yehaw!");
+    
+}
+
 /*
 #pragma mark - Navigation
 

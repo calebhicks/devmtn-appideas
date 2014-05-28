@@ -35,16 +35,26 @@
     UITableView *tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
     [self.view addSubview:tableView];
     
-    AXListViewControllerDataSource *dataSource = [AXListViewControllerDataSource new];
-    [dataSource registerTableView:tableView];
-    self.dataSource = dataSource;
+    self.dataSource = [AXListViewControllerDataSource new];
+    [self.dataSource registerTableView:tableView];
     
-    tableView.dataSource = dataSource;
     self.tableView = tableView;
     
     self.navigationItem.title = @"App Ideas";
-    self.navigationItem.prompt = @"Sample Prompt";
     
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Ideas" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    [self.navigationItem setBackBarButtonItem:backButton];
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addIdea)];
+    
+    [self.navigationItem setRightBarButtonItem:addButton];
+    
+}
+
+- (void)addIdea
+{
+    [self.dataSource newItem];
 }
 
 - (void)didReceiveMemoryWarning

@@ -14,4 +14,6 @@
 
 - (void)registerTableView:(UITableView *)tableView;
 
+- (void)newItem;
+
 @end
