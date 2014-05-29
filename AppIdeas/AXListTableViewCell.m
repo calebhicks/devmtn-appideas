@@ -17,9 +17,8 @@
     if (self) {
         // Initialization code
         
-        self.titleField = [[UITextField alloc]initWithFrame:CGRectMake(10, 10, self.frame.size.width, 20)];
-        self.titleField.placeholder = @"Idea Name";
-        self.titleField.text = @"Text for TitleField";
+        self.titleField = [[UITextField alloc]initWithFrame:CGRectMake(10, 10, self.frame.size.width, self.frame.size.height)];
+        self.titleField.placeholder = @"Whachu got genius?";
         [self.contentView addSubview:self.titleField];
         
     }
@@ -27,6 +26,11 @@
 }
 
 // add an update method here to set the text of the titleField
+
+- (void)updateFieldText:(NSString *)updatedText
+{
+    self.titleField.text = updatedText;
+}
 
 - (void)awakeFromNib
 {

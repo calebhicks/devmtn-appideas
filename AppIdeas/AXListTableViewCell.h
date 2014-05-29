@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AXListTableViewCell : UITableViewCell
+@interface AXListTableViewCell : UITableViewCell <UITextFieldDelegate>
 
-@property UITextField *titleField;
+@property (nonatomic, strong) UITextField *titleField;
 
 
 @end

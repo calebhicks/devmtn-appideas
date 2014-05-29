@@ -23,18 +23,17 @@ static NSString * const cellIdentifier = @"identifier";
 - (AXListTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     AXListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    cell.titleField.tag = indexPath.row;
+    cell.titleField.delegate = self;
     
-    if(!cell){
-        cell = [[AXListTableViewCell alloc]init];
-    }
-    
-    //cell.textLabel.text = @"I'm some text in a TableViewCell!";
     return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 1;
+    
+    //return [self.arrayOfIdeas count];
 }
 
 //- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -63,6 +62,11 @@ static NSString * const cellIdentifier = @"identifier";
     
 }
 
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+
+}
+
 /*
 #pragma mark - Navigation
 
@@ -75,6 +79,8 @@ static NSString * const cellIdentifier = @"identifier";
 */
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    [textField resignFirstResponder];
     return YES;
 }
 
